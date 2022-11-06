@@ -1,0 +1,62 @@
+.mainButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #f2f2f2;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0px 0px 7px #ffffff;
+  position: relative;
+  overflow: hidden;
+
+  &__circle {
+    position: absolute;
+    pointer-events: none;
+    left: 0;
+    top: 0;
+    border-radius: 50%;
+    &.zoomIn {
+      animation: zoomIn 0.5s forwards;
+    }
+    &.zoomOut {
+      animation: zoomOut 0.5s forwards;
+    }
+  }
+  img {
+    margin-left: 16px;
+  }
+}
+
+@keyframes zoomIn {
+  0% {
+    width: 0px;
+    height: 0px;
+    margin-left: 0px;
+    margin-top: 0px;
+    background-color: rgba(white, 0.2);
+  }
+  100% {
+    width: 400px;
+    height: 400px;
+    margin-left: -200px;
+    margin-top: -200px;
+    background-color: rgba(white, 0.3);
+  }
+}
+
+@keyframes zoomOut {
+  0% {
+    width: 400px;
+    height: 400px;
+    margin-left: -200px;
+    margin-top: -200px;
+    background-color: rgba(white, 0.3);
+  }
+  100% {
+    width: 0px;
+    height: 0px;
+    margin-left: 0px;
+    margin-top: 0px;
+    background-color: rgba(white, 0.2);
+  }
+}

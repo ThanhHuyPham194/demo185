@@ -1,0 +1,21 @@
+@import "../../../../scss/import.scss";
+.relicDrawingList {
+  .swiper {
+    padding-bottom: 80px !important;
+    .swiper-scrollbar {
+      opacity: 1 !important;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80%;
+      height: 2px !important;
+      background: rgba(255, 255, 255, 0.7) !important;
+      display: flex;
+      align-items: center;
+      &-drag {
+        border-radius: 6px !important;
+        background-color: $green-cl !important;
+        padding: 3px;
+      }
+    }
+  }
+}

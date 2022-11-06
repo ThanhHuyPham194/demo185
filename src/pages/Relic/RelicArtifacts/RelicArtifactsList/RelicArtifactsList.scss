@@ -1,0 +1,21 @@
+@import "../../../../scss/import.scss";
+.relicArtifactsList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  .relicArtifactsList__groupImage {
+    display: grid;
+    height: 300px;
+    column-gap: 16px;
+    width: calc(50% - 8px);
+    .relicArtifactsList__itemImage {
+      img {
+        height: 300px;
+        width: 100%;
+        border: 1px solid $green-cl;
+
+        object-fit: cover;
+      }
+    }
+  }
+}

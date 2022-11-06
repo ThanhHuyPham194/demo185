@@ -1,0 +1,23 @@
+@import "../../scss/import.scss";
+.home {
+  &__footer {
+    background: url("../../assets/imgs/backgroundContact.png") center center
+      no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    z-index: 0;
+    @include flexMid;
+    flex-direction: column;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba($color: #000000, $alpha: 0.9);
+      z-index: -1;
+    }
+  }
+}

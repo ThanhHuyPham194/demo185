@@ -1,0 +1,41 @@
+@import "../../scss/import.scss";
+.relics-item {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  column-gap: 60px;
+  &__video {
+    width: 100%;
+    max-height: 550px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &__info {
+    font-size: $fz-small;
+    .title {
+      font-family: "Cormorant";
+      font-size: 34px;
+      margin-bottom: 45px;
+    }
+    .content {
+      font-size: $fz-small;
+      margin-bottom: 24px;
+      line-height: 22px;
+    }
+    .button {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      p {
+        color: #69ffc9;
+        margin-right: 8px;
+      }
+      img {
+        height: 20px;
+        width: 10px;
+      }
+    }
+  }
+}

@@ -1,0 +1,47 @@
+@import "../../../../scss/import.scss";
+.ScrollItem {
+  display: flex;
+  padding: 16px 46px 16px 16px;
+  max-width: 430px;
+  max-height: 166px;
+  background: rgba(0, 0, 0, 0.5);
+  justify-content: space-between;
+  gap: 24px;
+  animation: scale 0.8s ease-in 4.5s;
+  img {
+    width: 200px;
+    object-fit: cover;
+  }
+  &-info {
+    &-name {
+      font-family: "Cormorant";
+      font-weight: 700;
+      font-size: $fz-small;
+      color: $white-cl;
+      width: max-content;
+    }
+    &-desc {
+      margin-top: 8px;
+      height: calc(100% - 16px);
+      max-width: 144px;
+      font-family: "Cormorant";
+      font-style: normal;
+      font-weight: 600;
+      font-size: $fz-small;
+      color: #c6c6c6;
+      line-height: 141%;
+      text-align: justify;
+      display: -webkit-box;
+      -webkit-line-clamp: 6;
+      overflow: hidden;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+  }
+}
+
+@keyframes scale {
+  from {
+    transform: scale(0.5);
+  }
+}

@@ -1,0 +1,118 @@
+@import "../../scss/import.scss";
+.header {
+  background-color: transparent;
+  position: fixed;
+  max-width: 1920px;
+  width: 100%;
+  z-index: 10;
+  margin: 0 auto;
+  z-index: 9999;
+  font-family: "Playfair Display";
+
+  &__img {
+    cursor: pointer;
+  }
+
+  .container {
+    display: flex;
+    height: 88px;
+    align-items: center;
+    justify-content: space-between;
+    .menu {
+      display: flex;
+      width: 40%;
+      justify-content: space-between;
+      a {
+        font-family: "Cormorant";
+        transition: all 2s;
+        position: relative;
+        padding: 15px;
+        display: block;
+        text-align: center;
+        width: max-content;
+        max-height: 46px;
+
+        span {
+          font-weight: 600;
+          font-size: $fz-small;
+          color: #bababa;
+          pointer-events: none;
+        }
+        &::after {
+          text-align: left;
+          content: "";
+          margin: 0;
+          opacity: 0;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          width: 0%;
+          color: transparent;
+          background: #aaa;
+          height: 1px;
+        }
+        &:hover {
+          color: white;
+        }
+        &:hover::after {
+          z-index: -10;
+          @include animation(fill 1s forwards);
+          opacity: 1;
+        }
+      }
+      .active {
+        span {
+          color: white;
+        }
+      }
+      a:nth-child(3) {
+        width: 80px;
+        transition: all 1s;
+        white-space: nowrap;
+        overflow: hidden;
+
+        &:hover {
+          width: 45%;
+
+          span {
+            display: none;
+          }
+          &::before {
+            content: "Bảo vệ và phát huy giá trị di tích lịch sử- văn hoá ";
+            font-weight: 700;
+            font-size: $fz-small;
+            color: $white-cl;
+          }
+        }
+      }
+      a:nth-child(3)[class*="active"] {
+        width: 45%;
+      }
+    }
+  }
+}
+
+@keyframes fill {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+    height: 1px;
+    background-color: white;
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.active {
+  border-bottom: 1px solid white;
+}

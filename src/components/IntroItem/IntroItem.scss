@@ -1,0 +1,86 @@
+@import "../../scss/import.scss";
+.intro-item {
+  position: relative;
+  font-family: "Playfair Display";
+  &__title {
+    text-align: center;
+    margin-bottom: 80px;
+  }
+  &__img {
+    width: 100%;
+  }
+  &__img.--left {
+    text-align: right;
+  }
+  .info {
+    max-width: 1055px;
+    width: 100%;
+    @include absMid;
+    z-index: 1;
+    &__title {
+      display: inline-block;
+      background-color: $black-cl;
+      margin-bottom: 12px;
+      p {
+        font-size: 24px;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+    }
+    &__wrapper {
+      background-color: #f2e8d6;
+      color: $black-cl;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 780px;
+      // chung
+      .title {
+        text-align: center;
+        margin-bottom: 26px;
+        margin-top: 40px;
+        font-size: 24px;
+        font-weight: 700;
+      }
+      .group-text {
+        line-height: 25px;
+        line-height: 25px;
+        padding: 0 35px;
+        font-size: $fz-small;
+        .txt-rotate > .wrap {
+          border-right: 1px solid $grey-cl;
+        }
+        .txt-rotate {
+          margin-bottom: 16px;
+          .wrap::first-letter {
+            font-size: 200px;
+          }
+          &.done {
+            .wrap {
+              border-right: none;
+            }
+          }
+        }
+      }
+      //
+      .left {
+        .group-text {
+          position: relative;
+          .icon {
+            position: absolute;
+            left: 10px;
+            top: -40px;
+          }
+        }
+      }
+      .right {
+        .group-text {
+          border-left: 1px solid $black-cl;
+        }
+        .date {
+          text-align: right;
+          margin: 40px 50px 30px 0;
+        }
+      }
+    }
+  }
+}

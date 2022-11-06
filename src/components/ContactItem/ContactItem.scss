@@ -1,0 +1,80 @@
+@import "../../scss/import.scss";
+.contact-item {
+  max-width: 510px;
+  margin-bottom: 160px;
+  &__intro {
+    text-align: center;
+    .text {
+      text-align: left;
+      margin-top: 66px;
+      margin-bottom: 50px;
+      line-height: 22px;
+      font-size: $fz-small;
+      p {
+        span {
+          color: #56cea2;
+        }
+      }
+    }
+  }
+  &__form {
+    label {
+      display: block;
+      margin-bottom: 20px;
+      div {
+        margin-bottom: 15px;
+      }
+      input {
+        width: 100%;
+        padding: 15px 0 15px 24px;
+        outline: none;
+        font-size: 15px;
+        border: none;
+        @include br(8px);
+        color: $grey-light-cl;
+        background: rgba(255, 255, 255, 0.2);
+      }
+      textarea {
+        width: 100%;
+        resize: none;
+        outline: none;
+        padding-top: 15px;
+        padding-left: 24px;
+        font-size: 15px;
+        @include br(8px);
+        color: $grey-light-cl;
+        background: rgba(255, 255, 255, 0.2);
+        border: none;
+      }
+      .error {
+        margin-top: 5px;
+        color: red;
+        font-size: 12px;
+        &::before {
+          content: "⚠";
+          margin-right: 5px;
+        }
+      }
+    }
+    .button {
+      @include flexMid;
+      position: relative;
+      .mainButton {
+        transition: 0.3s all linear;
+        z-index: 0;
+      }
+      button {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 0;
+        cursor: pointer;
+        z-index: 1;
+        &:hover ~ .mainButton {
+          background-color: $grey-light-cl;
+        }
+      }
+    }
+  }
+}

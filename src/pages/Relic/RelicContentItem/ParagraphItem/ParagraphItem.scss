@@ -1,0 +1,39 @@
+@import '../../../../scss/import.scss';
+.relicContentItem__paragraph {
+
+  
+    .relicContentItem__paragraph--text {
+      margin-top: 24px;
+  
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 26px;
+      text-align: justify;
+      letter-spacing: 0.25px;
+      color: white;
+      
+    }
+
+    .greenColor {
+      color: $green-cl;
+    }
+    .relicContentItem__paragraph--image{
+      img{
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+  
+  .imageLeft {
+    .relicContentItem__paragraph--image {
+      float: left ;
+      padding-right: 24px ;
+    }
+  }
+  .imageRight {
+    .relicContentItem__paragraph--image {
+      float: right ;
+      padding-left: 24px ;
+    }
+  }

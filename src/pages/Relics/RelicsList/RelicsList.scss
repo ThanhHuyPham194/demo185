@@ -1,0 +1,39 @@
+.relicsList {
+  margin-top: 88px;
+  height: 800px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 38px;
+}
+
+.relicsListPaginate {
+  display: flex;
+  margin-top: 42px;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  .relicsListPaginate__activePage {
+    font-weight: 500;
+    font-size: 24px;
+    color: #ffffff;
+  }
+  .next,.previous{
+   
+    cursor: pointer;
+    transition: all 0.6s ease;
+    a{
+        display: block;
+        width: 100%;
+        height: 100%; 
+        padding: 8px 20px;
+        border-radius: 12px;
+        border: 2px solid #989aad;
+        &:hover {
+            background-color: white;
+            border: 2px solid white;
+            color: black;
+          }
+    }
+    
+  }
+}

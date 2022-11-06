@@ -1,0 +1,19 @@
+.introPage {
+  background: url("../../assets/imgs/introBackground.png") center center
+    no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  padding-top: 165px;
+  position: relative;
+  z-index: 0;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(black, 0.9);
+    z-index: -1;
+  }
+}

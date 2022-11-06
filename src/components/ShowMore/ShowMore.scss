@@ -1,0 +1,35 @@
+@import '../../scss/import.scss';
+.showMore{
+    display: inline;
+    &__button{
+        margin-left:  auto;
+        margin-right: auto;
+        margin-top: 52px;
+        display: flex;
+         gap: 12px;
+         align-items: center;
+         justify-content: center;
+        color: $green-cl;
+        cursor: pointer;
+        &--text{
+            font-weight: 500;
+            font-size: $fz-default;
+            pointer-events: none;
+        }
+        &--icon{
+            display: flex;
+            align-items: center;
+            pointer-events: none;
+            transition: all 600ms ease;
+        }
+        &--icon-unActive{
+            transform: rotate(180deg);
+        }
+    }
+    &__children{
+        display: block;
+        width: 100%;
+    }
+
+    
+}

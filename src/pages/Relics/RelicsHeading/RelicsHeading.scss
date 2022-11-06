@@ -1,0 +1,26 @@
+.relicsHeading {
+  padding-top: 168px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__text {
+    position: relative;
+    font-weight: 600;
+    font-size: 32px;
+    color: white;
+    font-family: "Playfair Display";
+
+    &::after {
+      position: absolute;
+      content: "";
+      left: 50%;
+      bottom: -8px;
+      height: 1px;
+      width: calc(100% + 8px);
+      transform: translateX(-50%);
+      background-color: white;
+    }
+  }
+}
