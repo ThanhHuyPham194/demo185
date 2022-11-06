@@ -19,7 +19,7 @@ export default function RelicHeading() {
           {/* <Unity unityProvider={unityProvider} style={{ width: '100%', height: '100%' }} /> */}
           {/* <img src={lang} alt='lang'/> */}
       </div>
-      <video autoPlay loop >
+      <video className='haha' autoPlay loop >
             <source src={lang} type='video/mp4'/>
           </video>
 
